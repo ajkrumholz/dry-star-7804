@@ -28,7 +28,6 @@ RSpec.describe 'hospital show page' do
     end
 
     it 'shows the hospital name' do
-      save_and_open_page
       expect(page).to have_content(hospital_1.name)
       expect(page).to_not have_content(hospital_2.name)
     end
