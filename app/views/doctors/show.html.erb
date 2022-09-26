@@ -8,6 +8,9 @@
 
 <ul id='patient_list'>
   <% @doctor.patients.each do |patient| %>
-    <li><%= patient.name %></li>
+    <li>
+    <%= patient.name %>
+    <p><%= link_to "Unassign #{patient.name}", patient_doctor_path(@doctor.patient_doctor(patient)), method: :delete %></p>
+    </li>
   <% end %>
 </ul>
